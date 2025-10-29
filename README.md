@@ -41,7 +41,6 @@
 | :------------------------------- | :--------------------------------------------------- |
 | `baseline_cm.png`                | Confusion matrix for baseline model                  |
 | `loss_curve_distilbert.png`      | Training/Eval loss curve for DistilBERT              |
-| *(Optional)* `distilbert_cm.png` | Confusion matrix for DistilBERT model (if generated) |
 
 ---
 
