@@ -1,35 +1,48 @@
-# Secure Disaster Tweets Classification – Intermediate Update 1
+# Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
+### Intermediate Update 1
 
-## Overview
-This update presents the initial phase of the Disaster Tweets Classification project.  
-The focus is on preprocessing the dataset, performing exploratory data analysis (EDA),  
-and implementing baseline models to evaluate early performance.
+## Work Completed
+- Loaded the Kaggle dataset: Natural Language Processing with Disaster Tweets.
+- Cleaned missing values in the 'keyword' and 'location' columns.
+- Performed Exploratory Data Analysis (EDA).
+- Generated plots for class distribution and tweet length.
+- Implemented two models:
+  1) TF-IDF + Logistic Regression (Baseline Model)
+  2) DistilBERT (Fine-tuned Transformer, 2 Epochs)
+- Collected evaluation metrics and saved all results in organized folders.
 
-## Dataset
-The dataset is sourced from Kaggle – *Natural Language Processing with Disaster Tweets*.  
-It includes labeled tweets to identify whether a message refers to a real disaster or not.  
+## Outputs Generated
+### 📊 EDA Plots
+- class_balance.png  → Class distribution (0 = Non-Disaster, 1 = Disaster).
+- tweet_length.png   → Tweet length histogram.
 
-Files used:
-- `train.csv`
-- `test.csv`
-- `sample_submission.csv`
-
-## Implementation
-Two models were implemented in this phase:
-
+### 🤖 Model Performance
 | Model | Accuracy | F1 Score |
-|--------|-----------|-----------|
+|------|-----------|----------|
 | TF-IDF + Logistic Regression | 0.8070 | 0.7637 |
-| DistilBERT (2 epochs) | 0.8437 | 0.8128 |
+| DistilBERT (2 epochs)        | 0.8437 | 0.8128 |
 
-## Outputs
-The following outputs were generated and saved:
-- Class distribution plots and tweet length histograms  
-- Confusion matrices for baseline and transformer models  
-- Performance metrics stored under `outputs/metrics/`  
+### 📈 Evaluation Figures
+- baseline_cm.png   → Confusion matrix (Baseline).
+- distilbert_cm.png → Confusion matrix (DistilBERT).
 
-## Challenges & Next Steps
-- Fine-tuning transformer model for better generalization  
-- Experimenting with additional text-cleaning techniques  
-- Extending training to multiple epochs for performance gain  
-- Preparing final comparative analysis for the next milestone
+### 🗂️ Metrics Files
+- baseline.csv  → Accuracy and F1 of Logistic Regression.
+- distilbert.csv → Accuracy and F1 of DistilBERT model.
+
+### 📁 Folder Layout
+```
+ml-m1-disaster-tweets/
+│
+├── data/raw/ → train.csv, test.csv, sample_submission.csv
+├── outputs/
+│   ├── figs/ → class_balance.png, tweet_length.png, confusion matrices
+│   ├── metrics/ → baseline.csv, distilbert.csv
+│   └── checkpoints/ → saved model weights
+└── notebooks/ → Jupyter/Colab implementation
+```
+
+## Summary
+- Completed data preprocessing, EDA, and baseline vs transformer comparison.
+- DistilBERT achieved higher accuracy and F1 compared to the baseline.
+- Next step: train for more epochs and add new transformer models like RoBERTa.
