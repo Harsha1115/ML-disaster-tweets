@@ -109,3 +109,9 @@ ml-m1-disaster-tweets/
  **Status:** All deliverables for Intermediate Update 1 are completed and pushed to GitHub — dataset, EDA, baseline model, transformer model, metrics, and visualizations ready for review.
 
 ---
+
+###  Note
+
+checkpoints/ folder exists locally for model weight saving, but it’s excluded from GitHub via .gitignore to avoid large file uploads.
+
+---
