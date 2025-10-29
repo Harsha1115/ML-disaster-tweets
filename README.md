@@ -42,7 +42,16 @@ ml-m1-disaster-tweets/
 └── notebooks/ → Jupyter/Colab implementation
 ```
 
-## Summary
-- Completed data preprocessing, EDA, and baseline vs transformer comparison.
-- DistilBERT achieved higher accuracy and F1 compared to the baseline.
-- Next step: train for more epochs and add new transformer models like RoBERTa.
+## Challenges Faced
+- Limited GPU runtime on Colab caused early stopping at 2 epochs for DistilBERT.
+- Preprocessing complex tweets (hashtags, emojis, links) required extra cleaning.
+- Managing large model files in GitHub (needed .gitignore for checkpoints).
+- Training time for transformer models was relatively high.
+
+## Next Steps
+- Extend DistilBERT training to 3–5 epochs for better performance.
+- Apply advanced text normalization (remove URLs, mentions, emojis).
+- Experiment with other transformer models like RoBERTa and BERTweet.
+- Prepare final project report and presentation slides for submission.
+
+✅ **Status:** All requirements for Intermediate Update 1 completed successfully — dataset, EDA, baseline, transformer model, metrics, and outputs are ready for review.
