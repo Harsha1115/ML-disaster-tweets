@@ -4,7 +4,7 @@
 
 ---
 
-### ✅ Work Completed
+###  Work Completed
 
 * Loaded the Kaggle dataset: *Natural Language Processing with Disaster Tweets*
 * Cleaned missing values in **keyword** and **location** columns
@@ -17,7 +17,7 @@
 
 ---
 
-### 📊 EDA Plots
+###  EDA Plots
 
 | Plot                | Description                                         |
 | :------------------ | :-------------------------------------------------- |
@@ -97,7 +97,7 @@ ml-m1-disaster-tweets/
 
 ---
 
-### 🔜 Next Steps
+###  Next Steps
 
 * Extend DistilBERT training to 3–5 epochs for better accuracy
 * Apply advanced text normalization (remove URLs, mentions, emojis)
@@ -106,12 +106,6 @@ ml-m1-disaster-tweets/
 
 ---
 
-### 📉 Training Curve
-
-* `loss_curve_distilbert.png` → Shows training vs evaluation loss trend for DistilBERT
-
----
-
-✅ **Status:** All deliverables for Intermediate Update 1 are completed and pushed to GitHub — dataset, EDA, baseline model, transformer model, metrics, and visualizations ready for review.
+ **Status:** All deliverables for Intermediate Update 1 are completed and pushed to GitHub — dataset, EDA, baseline model, transformer model, metrics, and visualizations ready for review.
 
 ---
