@@ -26,7 +26,7 @@
 
 ---
 
-### 🤖 Model Performance
+###  Model Performance
 
 | Model                        | Accuracy | F1 Score |
 | :--------------------------- | :------: | :------: |
@@ -35,7 +35,7 @@
 
 ---
 
-### 📈 Evaluation Figures
+###  Evaluation Figures
 
 | File                             | Description                                          |
 | :------------------------------- | :--------------------------------------------------- |
@@ -44,7 +44,7 @@
 
 ---
 
-### 🗂️ Metrics Files
+###  Metrics Files
 
 | File             | Purpose                               |
 | :--------------- | :------------------------------------ |
@@ -53,7 +53,7 @@
 
 ---
 
-### 📁 Folder Layout
+###  Folder Layout
 
 ```
 ml-m1-disaster-tweets/
@@ -69,7 +69,6 @@ ml-m1-disaster-tweets/
 │   │   ├── tweet_length.png
 │   │   ├── baseline_cm.png
 │   │   ├── loss_curve_distilbert.png
-│   │   └── distilbert_cm.png   # optional
 │   │
 │   ├── metrics/
 │   │   ├── baseline.csv
@@ -82,7 +81,7 @@ ml-m1-disaster-tweets/
 
 ---
 
-### ⚠️ Challenges Faced
+###  Challenges Faced
 
 * Limited Colab GPU time → DistilBERT training stopped at 2 epochs
 * Tweets contained hashtags, links & emojis → needed extra pre-processing
