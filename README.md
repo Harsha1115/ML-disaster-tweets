@@ -55,3 +55,5 @@ ml-m1-disaster-tweets/
 - Prepare final project report and presentation slides for submission.
 
 ✅ **Status:** All requirements for Intermediate Update 1 completed successfully — dataset, EDA, baseline, transformer model, metrics, and outputs are ready for review.
+### 📉 Training Curve
+- loss_curve_distilbert.png → Training/Eval loss over steps (DistilBERT).
