@@ -1,4 +1,4 @@
-## Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
+Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
 
 ### 🧩 Intermediate Update 1 — Model Implementation & Initial Training
 
