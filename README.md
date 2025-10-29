@@ -44,6 +44,13 @@
 
 ---
 
+### 📉 Training Curve
+
+* `loss_curve_distilbert.png` → Shows training vs evaluation loss trend for DistilBERT
+
+
+---
+
 ###  Metrics Files
 
 | File             | Purpose                               |
