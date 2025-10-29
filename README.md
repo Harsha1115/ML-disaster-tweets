@@ -1,6 +1,6 @@
-Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
+##  Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
 
-### 🧩 Intermediate Update 1 — Model Implementation & Initial Training
+###  Intermediate Update 1 — Model Implementation & Initial Training
 
 ---
 
@@ -110,6 +110,3 @@ ml-m1-disaster-tweets/
 ✅ **Status:** All deliverables for Intermediate Update 1 are completed and pushed to GitHub — dataset, EDA, baseline model, transformer model, metrics, and visualizations ready for review.
 
 ---
-
-Eppudu ee README.md ni GitHub editor lo paste chesi commit chey macha —
-professor ki perfect visual and rubric match avutundi 🔥
