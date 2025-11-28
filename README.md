@@ -12,6 +12,16 @@ All code, outputs, figures, and metrics are included in this repository.
 
 ---
 
+# **Project Workflow**
+
+This project was developed step-by-step, starting from understanding the dataset and ending with advanced transformer-based modeling. The work began by loading the Kaggle Disaster Tweets dataset and examining how the tweets were structured—how many were labeled as disaster-related, how their lengths varied, and what kinds of patterns appeared in the text. After identifying missing values and noisy text, the dataset was cleaned and prepared for modeling.
+
+Once the data was ready, I performed Exploratory Data Analysis (EDA) to understand class imbalance, common keywords, and tweet length distributions. With this understanding, I created a baseline machine-learning model using TF-IDF and Logistic Regression to establish an initial accuracy benchmark. This helped determine how much improvement transformers could bring.
+
+After the baseline, I moved to deep learning by fine-tuning a DistilBERT model for the disaster-classification task. This significantly improved performance and provided stable training curves. In Update 2, the project was extended further by redesigning the model into a multi-task learning setup. Along with predicting the disaster label, the model also learned to classify each tweet into length categories (short, medium, long). Training both tasks together allowed the model to learn deeper text structure and resulted in smoother training behavior.
+
+Throughout the entire workflow, all outputs—figures, metrics, checkpoints, and notebooks—were organized into a clean directory structure to make the project easy to review, reproduce, and evaluate. This end-to-end process demonstrates a complete machine-learning pipeline, from raw data to advanced multi-task modeling.
+
 # **Update 1 - Baseline & DistilBERT Fine-Tuning**
 
 Update 1 focused on setting up the entire project from scratch and building the first working version of the disaster-tweet classifier. I started by loading and exploring the Kaggle dataset, checking tweet distributions, missing values, and basic text patterns. After understanding the data, I created a baseline machine-learning model using TF-IDF and Logistic Regression to get an initial performance benchmark. Then I moved to a transformer-based approach and fine-tuned DistilBERT for two epochs, generating training curves, accuracy scores, and confusion-matrix visuals. This update established the core workflow of the project - data preparation, exploration, baseline modeling, transformer training, and organized output folders. It set the foundation for deeper improvements implemented later in Update 2.
