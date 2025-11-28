@@ -1,79 +1,139 @@
-# 🚀 Multi-Class Classification of Disaster-Related Tweets Using DistilBERT
+#  **Multi-Class Classification of Disaster-Related Tweets Using DistilBERT**
 
+This project focuses on automatically identifying disaster-related tweets using machine learning and transformer-based NLP techniques. During natural disasters, thousands of tweets appear instantly, and identifying relevant information becomes essential for emergency response. By fine-tuning models like DistilBERT and experimenting with multi-task learning, this project demonstrates how tweet classification can be improved for real-time use.
 
-This project focuses on building a machine learning system that can automatically detect whether a tweet is related to a real disaster. Social media posts become extremely important during earthquakes, floods, fires, and other emergencies. Since thousands of tweets get posted every minute, manually filtering them is not possible.
-The goal of this project is to use NLP and transformer models to classify disaster-related tweets accurately and efficiently.
+The dataset used is the **Kaggle Disaster Tweets dataset**, containing real tweets labeled 0 as non-disaster and 1 as disaster.
+The project was developed in two stages:
 
----
+* **Intermediate Update 1:** EDA, baseline models, and single-task DistilBERT
+* **Intermediate Update 2:** Multi-task DistilBERT with auxiliary tweet-length prediction
 
-#  **Overview of the Project**
-
-We used the **Kaggle Disaster Tweets dataset**, which contains real tweets labeled as *disaster* or *non-disaster*.
-The project was completed in two phases:
-
-1. **Intermediate Update 1 → Baseline & Single-task DistilBERT**
-2. **Intermediate Update 2 → Multi-task DistilBERT**
-
-Both updates follow a clear workflow:
-data preparation → EDA → modeling → evaluation → results → organized outputs.
+All code, outputs, figures, and metrics are included in this repository.
 
 ---
 
-#  **Intermediate Update 1 — Baseline & DistilBERT**
+# **Intermediate Update 1 — Baseline & DistilBERT Fine-Tuning**
 
-The first update focused on understanding the dataset and building the initial models.
-After cleaning and inspecting the data, several visualizations were created to study class imbalance and tweet length patterns. These plots helped guide model selection and prepare the data for training.
+Update 1 focused on building the foundation of the project.
+We explored the dataset, cleaned text features, and trained the first two models.
 
-A simple baseline model using **TF-IDF + Logistic Regression** was trained first. This model provided a starting point to compare all future improvements.
-After that, a **DistilBERT transformer model** was fine-tuned on the dataset for two epochs. DistilBERT, being more sophisticated, learned contextual meaning from text and achieved higher accuracy and F1-score.
+## 📌 **Work Completed**
 
-All graphs, confusion matrices, and metrics were saved into organized folders for easy review.
+* Loaded and cleaned the Kaggle dataset
+* Performed EDA (class imbalance, tweet length patterns, text distribution)
+* Implemented:
 
----
-
-# 🟦 **Intermediate Update 2 — Multi-Task DistilBERT**
-
-In Update 2, the project moved beyond single-task classification.
-Instead of predicting only whether a tweet is disaster-related, a second auxiliary task was added: **predicting the tweet length category (short/medium/long)**.
-
-A custom **multi-task DistilBERT architecture** was created:
-
-* One shared DistilBERT encoder
-* Two classifier heads:
-
-  * Main head → disaster classification
-  * Auxiliary head → tweet-length bucket prediction
-
-Both tasks are trained together. The combined loss helps the model learn richer patterns and improves stability during training.
-The multi-task model was trained for three epochs, and the training loss, validation accuracy, and F1-score were recorded and plotted.
-
-All metrics were exported as CSV files and saved exactly like Update 1, following the same structure.
+  * **TF-IDF + Logistic Regression** (baseline)
+  * **Single-task DistilBERT** (fine-tuned for 2 epochs)
+* Generated classification reports, confusion matrix, and loss curves
+* Saved all outputs under `outputs/figs/` and metrics under `outputs/metrics/`
 
 ---
 
-# 🟦 **Results Summary**
+#  **EDA Figures (Update 1)**
 
-**Update 1:**
-
-* Baseline model gave moderate performance
-* DistilBERT significantly improved accuracy and F1
-* Training was smooth and visually represented with clean graphs
-
-**Update 2:**
-
-* Multi-task DistilBERT showed stable loss reduction across epochs
-* Validation accuracy remained consistent
-* Multi-task learning helped the model better understand tweet structure
-* All results were captured and saved to the repository
-
-Both updates follow a clean, consistent workflow and show progressive improvements in model capability.
+| File                | Description                                                     |
+| ------------------- | --------------------------------------------------------------- |
+| `class_balance.png` | Shows distribution of 0 vs 1 classes (non-disaster vs disaster) |
+| `tweet_length.png`  | Tweet-length histogram to understand text size patterns         |
 
 ---
 
-# 🟦 **Repository Structure**
+#  **Model Performance (Update 1)**
+
+| Model                        | Accuracy | F1-Score |
+| ---------------------------- | -------- | -------- |
+| TF-IDF + Logistic Regression | 0.8070   | 0.7637   |
+| DistilBERT (2 epochs)        | 0.8437   | 0.8128   |
+
+---
+
+# **Evaluation Figures (Update 1)**
+
+| File                        | Description                         |
+| --------------------------- | ----------------------------------- |
+| `baseline_cm.png`           | Confusion matrix for baseline model |
+| `loss_curve_distilbert.png` | Loss curve for DistilBERT training  |
+
+---
+
+#  **Metrics Files (Update 1)**
+
+| File             | Purpose                        |
+| ---------------- | ------------------------------ |
+| `baseline.csv`   | Accuracy & F1 for TF-IDF model |
+| `distilbert.csv` | Accuracy & F1 for DistilBERT   |
+
+---
+
+#  **Intermediate Update 2 — Multi-Task DistilBERT (Main + Auxiliary Task)**
+
+Update 2 extended the project by upgrading the model from single-task to multi-task learning.
+Multi-task learning helps the model learn deeper representations by adding an additional objective.
+
+##  **What Changed in Update 2**
+
+* Introduced **auxiliary task:** Tweet-length bucket prediction
+
+  * (Short / Medium / Long → 3 classes)
+* Built custom **multi-head architecture**:
+
+  * Shared DistilBERT encoder
+  * Main classification head (2 classes)
+  * Aux head (3 classes)
+* Joint training using combined loss:
+
+  ```
+  total_loss = main_loss + 0.5 * auxiliary_loss
+  ```
+* Trained the model for 3 epochs
+* Logged training loss + validation accuracy + validation F1
+* Saved updated figures, metrics, and summary tables
+
+---
+
+# **Update 2: Training Curve**
+
+| File                         | Description                                    |
+| ---------------------------- | ---------------------------------------------- |
+| `loss_curve_mtl_update2.png` | Multi-task training loss curve across 3 epochs |
+
+---
+
+# **Update 2 Evaluation Results**
+
+| Epoch | Train Loss | Val Accuracy | Val F1 |
+| ----- | ---------- | ------------ | ------ |
+| 1     | 0.7405     | 0.8351       | 0.8064 |
+| 2     | 0.4452     | 0.8266       | 0.8035 |
+| 3     | 0.3049     | 0.8378       | 0.7950 |
+
+The multi-task model showed smoother training and more stable performance across epochs.
+
+---
+
+#  **Metrics Files Update 2**
+
+| File                         | Purpose                                          |
+| ---------------------------- | ------------------------------------------------ |
+| `distilbert_mtl_update2.csv` | All epoch-wise metrics for multi-task DistilBERT |
+
+---
+
+#  **Other Update 2 Figures**
+
+| File                             | Description                             |
+| -------------------------------- | --------------------------------------- |
+| `label_distribution_update2.png` | Distribution of auxiliary label buckets |
+| `loss_curve_mtl_update2.png`     | Multi-task DistilBERT loss curve        |
+
+---
+
+#  **Final Repository Structure**
 
 ```
 ML-disaster-tweets/
+│
 ├── data/
 │   └── raw/
 │       ├── train.csv
@@ -99,13 +159,12 @@ ML-disaster-tweets/
 └── README.md
 ```
 
-The structure is identical for both updates, making the project easy to navigate and evaluate.
+This structure follows the same organization across both updates, making evaluation easy and professional.
 
 ---
 
-# 🟦 **Final Note**
+#  **Final Note (Same Style as Your Old README)**
 
-This repository now contains the complete work for both Update 1 and Update 2, including all data, EDA, baseline and transformer models, multi-task training, metrics, and visualizations.
-Everything is organized, verified, and ready for final evaluation.
+**Status: All deliverables for Intermediate Update 1 and Intermediate Update 2 have been completed and pushed to GitHub — including the dataset, EDA outputs, baseline model, DistilBERT single-task model, multi-task DistilBERT model, metrics, and all visualizations. The project is fully organized and ready for final evaluation.**
 
 ---
