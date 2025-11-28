@@ -1,69 +1,119 @@
-##  Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
+# 🚀 Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
 
-###  Intermediate Update 1 — Model Implementation & Initial Training
-
----
-
-###  Work Completed
-
-* Loaded the Kaggle dataset: *Natural Language Processing with Disaster Tweets*
-* Cleaned missing values in **keyword** and **location** columns
-* Performed Exploratory Data Analysis (EDA) on tweet distribution and length
-* Implemented two models:
-
-  * **TF-IDF + Logistic Regression** → Baseline
-  * **DistilBERT** (fine-tuned transformer, 2 epochs)
-* Collected evaluation metrics, generated plots, and saved organized outputs
+This project classifies tweets as **disaster** vs **non-disaster**, enabling real-time emergency response systems using machine learning and transformer-based NLP models.
 
 ---
 
-###  EDA Plots
+# 🟦 **Intermediate Update 1 — Baseline Models & Initial DistilBERT Training**
 
-| Plot                | Description                                         |
-| :------------------ | :-------------------------------------------------- |
-| `class_balance.png` | Class distribution (0 = Non-Disaster, 1 = Disaster) |
-| `tweet_length.png`  | Tweet-length histogram                              |
+## **Work Completed**
 
----
+* Loaded Kaggle dataset: *Natural Language Processing with Disaster Tweets*
+* Cleaned missing values in `keyword` and `location`
+* Performed full EDA on tweet distribution, class imbalance, and tweet-length patterns
+* Implemented two classification models:
 
-###  Model Performance
-
-| Model                        | Accuracy | F1 Score |
-| :--------------------------- | :------: | :------: |
-| TF-IDF + Logistic Regression |  0.8070  |  0.7637  |
-| DistilBERT (2 epochs)        |  0.8437  |  0.8128  |
+  * **TF-IDF + Logistic Regression** (baseline)
+  * **DistilBERT (fine-tuned, 2 epochs)**
+* Generated evaluation metrics, confusion matrix, and training loss curves
+* Organized outputs into clear GitHub project structure
 
 ---
 
-###  Evaluation Figures
+## 📊 **EDA Plots**
 
-| File                             | Description                                          |
-| :------------------------------- | :--------------------------------------------------- |
-| `baseline_cm.png`                | Confusion matrix for baseline model                  |
-| `loss_curve_distilbert.png`      | Training/Eval loss curve for DistilBERT              |
-
----
-
-### 📉 Training Curve
-
-* `loss_curve_distilbert.png` → Shows training vs evaluation loss trend for DistilBERT
-
+| File                | Description                                     |
+| ------------------- | ----------------------------------------------- |
+| `class_balance.png` | Distribution of disaster vs non-disaster tweets |
+| `tweet_length.png`  | Histogram of tweet lengths                      |
 
 ---
 
-###  Metrics Files
+## 🧪 **Model Performance (Update 1)**
 
-| File             | Purpose                               |
-| :--------------- | :------------------------------------ |
-| `baseline.csv`   | Accuracy & F1 for Logistic Regression |
-| `distilbert.csv` | Accuracy & F1 for DistilBERT model    |
+| Model                        | Accuracy   | F1 Score   |
+| ---------------------------- | ---------- | ---------- |
+| TF-IDF + Logistic Regression | **0.8070** | **0.7637** |
+| DistilBERT (2 epochs)        | **0.8437** | **0.8128** |
 
 ---
 
-###  Folder Layout
+## 📉 **Evaluation Figures**
+
+| File                        | Description                             |
+| --------------------------- | --------------------------------------- |
+| `baseline_cm.png`           | Confusion matrix of baseline model      |
+| `loss_curve_distilbert.png` | Training/eval loss curve for DistilBERT |
+
+---
+
+## 📁 **Metrics Files**
+
+| File             | Purpose                           |
+| ---------------- | --------------------------------- |
+| `baseline.csv`   | Logistic Regression accuracy & F1 |
+| `distilbert.csv` | DistilBERT accuracy & F1          |
+
+---
+
+# 🟩 **Intermediate Update 2 — Multi-Task DistilBERT (Main + Auxiliary Task)**
+
+## **Goal**
+
+Enhance classification performance using a **Multi-Task Learning (MTL)** setup:
+
+* **Main task:** Disaster (0/1)
+* **Auxiliary task:** Tweet length bucket (0/1/2)
+
+This approach helps the model learn structural patterns in text, improving generalization.
+
+---
+
+## **Work Completed**
+
+* Added auxiliary target: tweet-length bucket (short / medium / long)
+* Implemented **DistilBERT MTL model** with:
+
+  * Shared transformer encoder
+  * Main classification head (2 classes)
+  * Auxiliary head (3 classes)
+* Trained MTL model for **3 epochs**
+* Printed epoch-wise accuracy & F1 metrics
+* Saved all figures and metrics to GitHub
+* Added MTL training curve under `outputs/figs/`
+
+---
+
+## 📉 **Update 2 Training Curve**
+
+| File                         | Description                                   |
+| ---------------------------- | --------------------------------------------- |
+| `loss_curve_mtl_update2.png` | Training loss curve for multi-task DistilBERT |
+
+---
+
+## 📈 **MTL Model Evaluation (Update 2)**
+
+| Epoch | Train Loss | Val Accuracy | Val F1 |
+| ----- | ---------- | ------------ | ------ |
+| 1     | 0.7405     | 0.8351       | 0.8064 |
+| 2     | 0.4452     | 0.8266       | 0.8035 |
+| 3     | 0.3049     | 0.8378       | 0.7950 |
+
+---
+
+## 📁 **Update 2 Metrics**
+
+| File                         | Purpose                                     |
+| ---------------------------- | ------------------------------------------- |
+| `distilbert_mtl_update2.csv` | Stores all epoch-wise metrics for MTL model |
+
+---
+
+# 📂 **Folder Layout (Final Combined Project)**
 
 ```
-ml-m1-disaster-tweets/
+ML-disaster-tweets/
 ├── data/
 │   └── raw/
 │       ├── train.csv
@@ -76,44 +126,35 @@ ml-m1-disaster-tweets/
 │   │   ├── tweet_length.png
 │   │   ├── baseline_cm.png
 │   │   ├── loss_curve_distilbert.png
+│   │   ├── loss_curve_mtl_update2.png
+│   │   ├── label_distribution_update2.png
 │   │
-│   ├── metrics/
-│   │   ├── baseline.csv
-│   │   └── distilbert.csv
-│   │
-│   └── checkpoints/            # saved model weights
+│   └── metrics/
+│       ├── baseline.csv
+│       ├── distilbert.csv
+│       └── distilbert_mtl_update2.csv
 │
-└── README.md
+├── Term_Project_Harsha_Update1.ipynb
+├── Term_Project_Harsha_Update2.ipynb
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-###  Challenges Faced
+# ⚠️ **Challenges Faced**
 
-* Limited Colab GPU time → DistilBERT training stopped at 2 epochs
-* Tweets contained hashtags, links & emojis → needed extra pre-processing
-* Large model files excluded from GitHub via `.gitignore`
-* Transformer training was computationally expensive
-
----
-
-###  Next Steps
-
-* Extend DistilBERT training to 3–5 epochs for better accuracy
-* Apply advanced text normalization (remove URLs, mentions, emojis)
-* Experiment with other transformer models (RoBERTa, BERTweet)
-* Prepare final report and presentation slides
+* Limited Colab GPU time (training longer epochs restricted)
+* Tweets contained URLs, hashtags & emojis requiring extra preprocessing
+* Large transformer checkpoints excluded via `.gitignore`
+* Multi-task training and metrics extraction needed additional debugging
 
 ---
 
- **Status:** All deliverables for Intermediate Update 1 are completed and pushed to GitHub — dataset, EDA, baseline model, transformer model, metrics, and visualizations ready for review.
+# ✅ **Status**
 
----
-
-###  Note
-
-* checkpoints/ folder exists locally for model weight saving, but it’s excluded from GitHub via .gitignore to avoid large file uploads.
-
-* The Colab notebook Update 1 and Update 2 may not preview on GitHub due to metadata format, but it can be downloaded and opened normally in Google Colab.
+All deliverables for **Intermediate Update 1** and **Intermediate Update 2** are complete.
+Dataset, EDA, baseline model, DistilBERT, multi-task model, metrics, and all visualizations are organized and pushed to GitHub.
+The notebooks can be downloaded and run directly in Google Colab.
 
 ---
