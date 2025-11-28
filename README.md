@@ -20,7 +20,7 @@ Once the data was ready, I performed Exploratory Data Analysis (EDA) to understa
 
 After the baseline, I moved to deep learning by fine-tuning a DistilBERT model for the disaster-classification task. This significantly improved performance and provided stable training curves. In Update 2, the project was extended further by redesigning the model into a multi-task learning setup. Along with predicting the disaster label, the model also learned to classify each tweet into length categories (short, medium, long). Training both tasks together allowed the model to learn deeper text structure and resulted in smoother training behavior.
 
-Throughout the entire workflow, all outputs—figures, metrics, checkpoints, and notebooks—were organized into a clean directory structure to make the project easy to review, reproduce, and evaluate. This end-to-end process demonstrates a complete machine-learning pipeline, from raw data to advanced multi-task modeling.
+Throughout the entire workflow, all outputs - figures, metrics, checkpoints, and notebooks - were organized into a clean directory structure to make the project easy to review, reproduce, and evaluate. This end-to-end process demonstrates a complete machine-learning pipeline, from raw data to advanced multi-task modeling.
 
 # **Update 1 - Baseline & DistilBERT Fine-Tuning**
 
