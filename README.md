@@ -68,8 +68,7 @@ We explored the dataset, cleaned text features, and trained the first two models
 
 #  **Update 2 - Multi-Task DistilBERT (Main + Auxiliary Task)**
 
-Update 2 extended the project by upgrading the model from single-task to multi-task learning.
-Multi-task learning helps the model learn deeper representations by adding an additional objective.
+Update 2 mainly focused on improving the model by shifting from simple single-task classification to a multi-task learning setup. Instead of only predicting whether a tweet is about a disaster or not, the model also learned an additional task where it identified the length category of each tweet. By training both tasks together, the model was able to understand tweet structure better and learn more meaningful patterns. I redesigned the DistilBERT model with two heads, trained it for three full epochs, and tracked the losses for both tasks. The notebook now includes the updated architecture, training graphs, validation accuracy, final predictions, and the saved checkpoints for analysis. Overall, Update 2 added more depth to the model and made the training process richer and more robust than Update 1.
 
 ##  **What Changed in Update 2**
 
