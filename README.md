@@ -5,14 +5,14 @@ This project focuses on automatically identifying disaster-related tweets using 
 The dataset used is the **Kaggle Disaster Tweets dataset**, containing real tweets labeled 0 as non-disaster and 1 as disaster.
 The project was developed in two stages:
 
-* **Intermediate Update 1:** EDA, baseline models, and single-task DistilBERT
-* **Intermediate Update 2:** Multi-task DistilBERT with auxiliary tweet-length prediction
+* **Update 1:** EDA, baseline models, and single-task DistilBERT
+* **Update 2:** Multi-task DistilBERT with auxiliary tweet-length prediction
 
 All code, outputs, figures, and metrics are included in this repository.
 
 ---
 
-# **Intermediate Update 1 — Baseline & DistilBERT Fine-Tuning**
+# **Update 1 — Baseline & DistilBERT Fine-Tuning**
 
 Update 1 focused on building the foundation of the project.
 We explored the dataset, cleaned text features, and trained the first two models.
@@ -30,7 +30,7 @@ We explored the dataset, cleaned text features, and trained the first two models
 
 ---
 
-#  **EDA Figures (Update 1)**
+#  **EDA Figures - Update 1**
 
 | File                | Description                                                     |
 | ------------------- | --------------------------------------------------------------- |
@@ -39,7 +39,7 @@ We explored the dataset, cleaned text features, and trained the first two models
 
 ---
 
-#  **Model Performance (Update 1)**
+#  **Model Performance - Update 1**
 
 | Model                        | Accuracy | F1-Score |
 | ---------------------------- | -------- | -------- |
@@ -48,7 +48,7 @@ We explored the dataset, cleaned text features, and trained the first two models
 
 ---
 
-# **Evaluation Figures (Update 1)**
+# **Evaluation Figures - Update 1**
 
 | File                        | Description                         |
 | --------------------------- | ----------------------------------- |
@@ -57,7 +57,7 @@ We explored the dataset, cleaned text features, and trained the first two models
 
 ---
 
-#  **Metrics Files (Update 1)**
+#  **Metrics Files - Update 1**
 
 | File             | Purpose                        |
 | ---------------- | ------------------------------ |
@@ -66,7 +66,7 @@ We explored the dataset, cleaned text features, and trained the first two models
 
 ---
 
-#  **Intermediate Update 2 — Multi-Task DistilBERT (Main + Auxiliary Task)**
+#  **Update 2 — Multi-Task DistilBERT (Main + Auxiliary Task)**
 
 Update 2 extended the project by upgrading the model from single-task to multi-task learning.
 Multi-task learning helps the model learn deeper representations by adding an additional objective.
