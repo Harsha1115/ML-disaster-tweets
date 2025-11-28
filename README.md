@@ -163,7 +163,7 @@ This structure follows the same organization across both updates, making evaluat
 
 ---
 
-#  **Final Note (Same Style as Your Old README)**
+#  **Final Note**
 
 **Status: All deliverables for Intermediate Update 1 and Intermediate Update 2 have been completed and pushed to GitHub — including the dataset, EDA outputs, baseline model, DistilBERT single-task model, multi-task DistilBERT model, metrics, and all visualizations. The project is fully organized and ready for final evaluation.**
 
