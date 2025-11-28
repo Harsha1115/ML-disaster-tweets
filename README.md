@@ -17,7 +17,7 @@ All code, outputs, figures, and metrics are included in this repository.
 Update 1 focused on building the foundation of the project.
 We explored the dataset, cleaned text features, and trained the first two models.
 
-## 📌 **Work Completed**
+##  **Work Completed**
 
 * Loaded and cleaned the Kaggle dataset
 * Performed EDA (class imbalance, tweet length patterns, text distribution)
