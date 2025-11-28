@@ -163,6 +163,10 @@ This structure follows the same organization across both updates, making evaluat
 
 #  **Final Note**
 
-This repository now contains the complete work for both Update 1 and Update 2. Across the project, I explored the dataset, performed thorough EDA, built a baseline TF-IDF model, fine-tuned a single-task DistilBERT model, and finally implemented a multi-task DistilBERT model with an auxiliary length-bucket prediction task. All training results, graphs, confusion matrices, metrics, and notebooks have been saved in an organized folder structure. The models show clear improvement from baseline to transformers, and the multi-task version demonstrates stable training and richer text understanding. The project is fully completed, documented end-to-end, and ready for final evaluation.
+This repository now captures the full progress of both Update 1 and Update 2 in one place. The work started with exploring the disaster-tweets dataset, cleaning the text, and building a strong baseline using TF-IDF and Logistic Regression. After that, the project moved into transformer-based modeling by fine-tuning DistilBERT, which already gave a clear improvement over the baseline.
+
+In Update 2, the model was enhanced further by introducing a multi-task learning setup, where the network learned tweet classification along with an auxiliary length-bucket prediction task. This helped the model learn better text representations and resulted in smoother, more stable training across epochs.
+
+All graphs, metrics, reports, and notebooks have been saved neatly in the repository, matching a clean, reproducible project workflow. With both updates completed, the project is now fully ready for evaluation, showcasing a complete pipeline from EDA to advanced transformer modeling.
 
 ---
