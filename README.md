@@ -14,7 +14,7 @@ All code, outputs, figures, and metrics are included in this repository.
 
 # **Project Workflow**
 
-This project was developed step-by-step, starting from understanding the dataset and ending with advanced transformer-based modeling. The work began by loading the Kaggle Disaster Tweets dataset and examining how the tweets were structured—how many were labeled as disaster-related, how their lengths varied, and what kinds of patterns appeared in the text. After identifying missing values and noisy text, the dataset was cleaned and prepared for modeling.
+This project was developed step-by-step, starting from understanding the dataset and ending with advanced transformer based modeling. The work began by loading the Kaggle Disaster Tweets dataset and examining how the tweets were structured - how many were labeled as disaster-related, how their lengths varied, and what kinds of patterns appeared in the text. After identifying missing values and noisy text, the dataset was cleaned and prepared for modeling.
 
 Once the data was ready, I performed Exploratory Data Analysis (EDA) to understand class imbalance, common keywords, and tweet length distributions. With this understanding, I created a baseline machine-learning model using TF-IDF and Logistic Regression to establish an initial accuracy benchmark. This helped determine how much improvement transformers could bring.
 
