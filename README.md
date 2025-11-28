@@ -114,6 +114,6 @@ ml-m1-disaster-tweets/
 
 * checkpoints/ folder exists locally for model weight saving, but it’s excluded from GitHub via .gitignore to avoid large file uploads.
 
-* The Colab notebook may not preview on GitHub due to metadata format, but it can be downloaded and opened normally in Google Colab.
+* The Colab notebook Update 1 and Update 2 may not preview on GitHub due to metadata format, but it can be downloaded and opened normally in Google Colab.
 
 ---
