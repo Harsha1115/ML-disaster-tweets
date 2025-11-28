@@ -1,6 +1,9 @@
 # Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
 
-This project classifies tweets as **disaster** vs **non-disaster**, enabling real-time emergency response systems using machine learning and transformer-based NLP models.
+This project aims to automatically classify tweets as disaster-related or not. During natural disasters, thousands of tweets appear every minute, and manually checking them is impossible. Using machine learning and transformer-based models like DistilBERT, we can quickly filter disaster information and support real-time emergency response systems.
+
+The dataset used is the Kaggle Disaster Tweets dataset, which contains around 10k tweets labeled as “disaster” (1) or “non-disaster” (0).
+The goal of this project is to build ML and NLP models, compare their performance, and understand how different techniques improve tweet classification.
 
 ---
 
