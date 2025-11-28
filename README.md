@@ -14,8 +14,7 @@ All code, outputs, figures, and metrics are included in this repository.
 
 # **Update 1 - Baseline & DistilBERT Fine-Tuning**
 
-Update 1 focused on building the foundation of the project.
-We explored the dataset, cleaned text features, and trained the first two models.
+Update 1 focused on setting up the entire project from scratch and building the first working version of the disaster-tweet classifier. I started by loading and exploring the Kaggle dataset, checking tweet distributions, missing values, and basic text patterns. After understanding the data, I created a baseline machine-learning model using TF-IDF and Logistic Regression to get an initial performance benchmark. Then I moved to a transformer-based approach and fine-tuned DistilBERT for two epochs, generating training curves, accuracy scores, and confusion-matrix visuals. This update established the core workflow of the project - data preparation, exploration, baseline modeling, transformer training, and organized output folders. It set the foundation for deeper improvements implemented later in Update 2.
 
 ##  **Work Completed**
 
