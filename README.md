@@ -165,6 +165,6 @@ This structure follows the same organization across both updates, making evaluat
 
 #  **Final Note**
 
-**Status: All deliverables for Intermediate Update 1 and Intermediate Update 2 have been completed and pushed to GitHub — including the dataset, EDA outputs, baseline model, DistilBERT single-task model, multi-task DistilBERT model, metrics, and all visualizations. The project is fully organized and ready for final evaluation.**
+This repository now contains the complete work for both Update 1 and Update 2. Across the project, I explored the dataset, performed thorough EDA, built a baseline TF-IDF model, fine-tuned a single-task DistilBERT model, and finally implemented a multi-task DistilBERT model with an auxiliary length-bucket prediction task. All training results, graphs, confusion matrices, metrics, and notebooks have been saved in an organized folder structure. The models show clear improvement from baseline to transformers, and the multi-task version demonstrates stable training and richer text understanding. The project is fully completed, documented end-to-end, and ready for final evaluation.
 
 ---
