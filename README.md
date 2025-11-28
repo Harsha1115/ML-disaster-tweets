@@ -1,10 +1,10 @@
-# 🚀 Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
+# Multi-Class Classification of Disaster-Related Tweets Using DistilBERT for Real-Time Emergency Response
 
 This project classifies tweets as **disaster** vs **non-disaster**, enabling real-time emergency response systems using machine learning and transformer-based NLP models.
 
 ---
 
-# 🟦 **Intermediate Update 1 — Baseline Models & Initial DistilBERT Training**
+# **Intermediate Update 1 — Baseline Models & Initial DistilBERT Training**
 
 ## **Work Completed**
 
@@ -20,7 +20,7 @@ This project classifies tweets as **disaster** vs **non-disaster**, enabling rea
 
 ---
 
-## 📊 **EDA Plots**
+## **EDA Plots**
 
 | File                | Description                                     |
 | ------------------- | ----------------------------------------------- |
@@ -29,7 +29,7 @@ This project classifies tweets as **disaster** vs **non-disaster**, enabling rea
 
 ---
 
-## 🧪 **Model Performance (Update 1)**
+## **Model Performance (Update 1)**
 
 | Model                        | Accuracy   | F1 Score   |
 | ---------------------------- | ---------- | ---------- |
@@ -38,7 +38,7 @@ This project classifies tweets as **disaster** vs **non-disaster**, enabling rea
 
 ---
 
-## 📉 **Evaluation Figures**
+## **Evaluation Figures**
 
 | File                        | Description                             |
 | --------------------------- | --------------------------------------- |
@@ -47,7 +47,7 @@ This project classifies tweets as **disaster** vs **non-disaster**, enabling rea
 
 ---
 
-## 📁 **Metrics Files**
+## **Metrics Files**
 
 | File             | Purpose                           |
 | ---------------- | --------------------------------- |
@@ -56,7 +56,7 @@ This project classifies tweets as **disaster** vs **non-disaster**, enabling rea
 
 ---
 
-# 🟩 **Intermediate Update 2 — Multi-Task DistilBERT (Main + Auxiliary Task)**
+#  **Intermediate Update 2 — Multi-Task DistilBERT (Main + Auxiliary Task)**
 
 ## **Goal**
 
@@ -84,7 +84,7 @@ This approach helps the model learn structural patterns in text, improving gener
 
 ---
 
-## 📉 **Update 2 Training Curve**
+##  **Update 2 Training Curve**
 
 | File                         | Description                                   |
 | ---------------------------- | --------------------------------------------- |
@@ -92,7 +92,7 @@ This approach helps the model learn structural patterns in text, improving gener
 
 ---
 
-## 📈 **MTL Model Evaluation (Update 2)**
+##  **MTL Model Evaluation (Update 2)**
 
 | Epoch | Train Loss | Val Accuracy | Val F1 |
 | ----- | ---------- | ------------ | ------ |
@@ -102,7 +102,7 @@ This approach helps the model learn structural patterns in text, improving gener
 
 ---
 
-## 📁 **Update 2 Metrics**
+## **Update 2 Metrics**
 
 | File                         | Purpose                                     |
 | ---------------------------- | ------------------------------------------- |
@@ -110,7 +110,7 @@ This approach helps the model learn structural patterns in text, improving gener
 
 ---
 
-# 📂 **Folder Layout (Final Combined Project)**
+#  **Folder Layout (Final Combined Project)**
 
 ```
 ML-disaster-tweets/
@@ -142,7 +142,7 @@ ML-disaster-tweets/
 
 ---
 
-# ⚠️ **Challenges Faced**
+# **Challenges Faced**
 
 * Limited Colab GPU time (training longer epochs restricted)
 * Tweets contained URLs, hashtags & emojis requiring extra preprocessing
@@ -151,7 +151,7 @@ ML-disaster-tweets/
 
 ---
 
-# ✅ **Status**
+# **Status**
 
 All deliverables for **Intermediate Update 1** and **Intermediate Update 2** are complete.
 Dataset, EDA, baseline model, DistilBERT, multi-task model, metrics, and all visualizations are organized and pushed to GitHub.
