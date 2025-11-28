@@ -12,7 +12,7 @@ All code, outputs, figures, and metrics are included in this repository.
 
 ---
 
-# **Update 1 — Baseline & DistilBERT Fine-Tuning**
+# **Update 1 - Baseline & DistilBERT Fine-Tuning**
 
 Update 1 focused on building the foundation of the project.
 We explored the dataset, cleaned text features, and trained the first two models.
@@ -66,7 +66,7 @@ We explored the dataset, cleaned text features, and trained the first two models
 
 ---
 
-#  **Update 2 — Multi-Task DistilBERT (Main + Auxiliary Task)**
+#  **Update 2 - Multi-Task DistilBERT (Main + Auxiliary Task)**
 
 Update 2 extended the project by upgrading the model from single-task to multi-task learning.
 Multi-task learning helps the model learn deeper representations by adding an additional objective.
