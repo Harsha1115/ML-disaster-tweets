@@ -2,7 +2,7 @@
 
 This project focuses on automatically identifying disaster-related tweets using machine learning and transformer-based NLP techniques. During natural disasters, thousands of tweets appear instantly, and identifying relevant information becomes essential for emergency response. By fine-tuning models like DistilBERT and experimenting with multi-task learning, this project demonstrates how tweet classification can be improved for real-time use.
 
-The dataset used is the **Kaggle Disaster Tweets dataset**, containing real tweets labeled 0 as non-disaster and 1 as disaster.
+The dataset used is the **Kaggle Disaster Tweets dataset**, containing real tweets labeled 0 as non-disaster and 1 as disaster. https://www.kaggle.com/competitions/nlp-getting-started/data
 The project was developed in two stages:
 
 * **Update 1:** EDA, baseline models, and single-task DistilBERT
